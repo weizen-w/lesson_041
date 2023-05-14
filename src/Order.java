@@ -50,4 +50,12 @@ public class Order {
     scanner.nextLine();
     return new Order(id, content, client, phone, price);
   }
+
+  public static int getTotalSum(List<Order> orders) {
+    int sum = 0;
+    for (Order order : orders) {
+      sum += order.getPrice();
+    }
+    return sum;
+  }
 }
